@@ -74,8 +74,6 @@ header {
     width: 95vw;
     
     margin: calc(2vw + 92px) auto 2vw auto;
-
-    overflow-x: scroll;
 }
 
 .escolher-bebida{
@@ -93,6 +91,7 @@ header {
 .cardapio {
     display: flex;
     overflow: hidden;
+    overflow: auto;
 }
 
 .escolher-pedido {
