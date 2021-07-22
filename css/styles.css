@@ -1,9 +1,15 @@
 * {
     font-family: 'Roboto', sans-serif;
+
+    box-sizing: border-box;
 }
 
 body {
     background-color: #eeeeee;
+}
+
+strong {
+    font-weight: bold;
 }
 
 h1, h2 {
@@ -23,6 +29,22 @@ h3 {
 
 h4 {
     font-size: 16px;
+    color: #333333;
+}
+
+h5 {
+    font-size: 15px;
+    color: #a6a6a6;
+}
+
+p {
+    font-size: 16px;
+    color: #000000;
+}
+
+img {
+    width: 35vw;
+    height: 25vw;
 }
 
 header {
@@ -48,8 +70,47 @@ header {
     align-items:flex-start;    
 }
 
-.principal {
-    margin-top: calc(2vw + 92px);
+.prato-principal {
+    width: 95vw;
+    
+    margin: calc(2vw + 92px) auto 2vw auto;
+
+    overflow-x: scroll;
+}
+
+.escolher-bebida{
+    width: 95vw;
+    
+    margin: 2vw auto
+}
+
+.escolher-sobremesa {
+    width: 95vw;
+    
+    margin: 2vw auto calc(2vw + 92px);
+}
+
+.cardapio {
+    display: flex;
+    overflow: hidden;
+}
+
+.escolher-pedido {
+    width: 40vw;
+    height: 50vw;
+
+    padding: 10px;
+
+    background-color: #ffffff;  
+    
+    border-radius: 10px;
+
+    margin: 4vw 2vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 footer {
