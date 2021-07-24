@@ -45,25 +45,25 @@
                 <img src="images/comida-caseira.jpg" alt="">
                 <h4><strong>Prato Caseiro</strong></h4>
                 <h5>Gostinho caseiro, produtos naturais</h5>
-                <p>R$ 15,99</p>
+                <p>R$ <span class="valor-prato">15,99</span></p>
             </div>
             <div class="escolher-pedido" onclick="selecionarPrato(this);">
                 <img src="images/lasanha.jpg" alt="">
                 <h4><strong>Lasanha p/2</strong></h4>
                 <h5>Muito queijo e molho especial</h5>
-                <p>R$ 24.99</p>
+                <p>R$ <span class="valor-prato">24,99</span></p>
             </div>
             <div class="escolher-pedido" onclick="selecionarPrato(this);">
                 <img src="images/lasanha.jpg" alt="">
                 <h4><strong>Lasanha p/4</strong></h4>
                 <h5>Muito queijo e molho especial</h5>
-                <p>R$ 39.99</p>
+                <p>R$ <span class="valor-prato">39,99</span></p>
             </div>
             <div class="escolher-pedido" onclick="selecionarPrato(this);">
                 <img src="images/lamen.jpg" alt="">
                 <h4><strong>Lámen</strong></h4>
                 <h5>O Japão na sua mesa</h5>
-                <p>R$ 19.99</p>
+                <p>R$ <span class="valor-prato">19,99</span></p>
             </div>
         </div>
         
@@ -82,25 +82,25 @@
                 <img src="images/ratatouille.jpg" alt="">
                 <h4><strong>Ratatouille</strong></h4>
                 <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ 29,99</p>
+                <p>R$ <span class="valor-bebida">29.99</span></p>
             </div>
             <div class="escolher-pedido" onclick="selecionarBebida(this);">
                 <img src="images/ratatouille.jpg" alt="">
                 <h4><strong>Ratatouille</strong></h4>
                 <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ 29,99</p>
+                <p>R$ <span class="valor-bebida">4.99</span></p>
             </div>
             <div class="escolher-pedido" onclick="selecionarBebida(this);">
                 <img src="images/ratatouille.jpg" alt="">
                 <h4><strong>Ratatouille</strong></h4>
                 <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ 29,99</p>
+                <p>R$ <span class="valor-bebida">4.99</span></p>
             </div>
             <div class="escolher-pedido" onclick="selecionarBebida(this);">
                 <img src="images/ratatouille.jpg" alt="">
                 <h4><strong>Ratatouille</strong></h4>
                 <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ 29,99</p>
+                <p>R$ <span class="valor-bebida">4.99</span></p>
             </div>
         </div>
         
@@ -119,32 +119,32 @@
                 <img src="images/bolo.jpeg" alt="">
                 <h4><strong>Bolo Chocolate</strong></h4>
                 <h5>Recheio: Café - 1 fatia</h5>
-                <p>R$ 9.99</p>
+                <p>R$ <span class="valor-sobremesa">9.99</span></p>
             </div>
             <div class="escolher-pedido" onclick="selecionarSobremesa(this);">
                 <img src="images/cupcake.jfif" alt="">
                 <h4><strong>Cupcake</strong></h4>
                 <h5>Sabor: chocolate - 5 unidades.</h5>
-                <p>R$ 23.99</p>
+                <p>R$ <span class="valor-sobremesa">23.99</span></p>
             </div>
             <div class="escolher-pedido" onclick="selecionarSobremesa(this);">
                 <img src="images/cookies.jpeg" alt="">
                 <h4><strong>Cookies</strong></h4>
                 <h5>5 unidades. Chocolatudo</h5>
-                <p>R$ 21,99</p>
+                <p>R$ <span class="valor-sobremesa">21.99</span></p>
             </div>
             <div class="escolher-pedido" onclick="selecionarSobremesa(this);">
                 <img src="images/donuts.jpeg" alt="">
                 <h4><strong>Donuts</strong></h4>
                 <h5>Sabor: chocolate. 2 unidades</h5>
-                <p>R$ 9,99</p>
+                <p>R$ <span class="valor-sobremesa">9.99</span></p>
             </div>
         </div>
         
     </div>
 
     <footer>
-        <button class="fechar-pedido">Selecione os 3 itens para fechar o pedido</button>
+        <button class="fechar-pedido" onclick="fecharPedido();">Selecione os 3 itens para fechar o pedido</button>
     </footer>
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
