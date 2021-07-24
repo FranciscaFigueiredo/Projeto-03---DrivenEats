@@ -34,35 +34,36 @@
     <div class="prato-principal">
         <h2>Primeiro, Seu prato</h2>
         <div class="cardapio">
-            <div class="escolher-pedido">
+            <div class="escolher-pedido" onclick="selecionarPrato(this);">
                 <img src="images/ratatouille.jpg" alt="">
                 <h4><strong>Ratatouille</strong></h4>
                 <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ 29,99</p>
+                <p>R$ <span class="valor-prato">29,99</span></p>
+                
             </div>
-            <div class="escolher-pedido">
-                <img src="images/ratatouille.jpg" alt="">
-                <h4><strong>Ratatouille</strong></h4>
-                <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ 29,99</p>
+            <div class="escolher-pedido" onclick="selecionarPrato(this);">
+                <img src="images/comida-caseira.jpg" alt="">
+                <h4><strong>Prato Caseiro</strong></h4>
+                <h5>Gostinho caseiro, produtos naturais</h5>
+                <p>R$ 15,99</p>
             </div>
-            <div class="escolher-pedido">
-                <img src="images/ratatouille.jpg" alt="">
-                <h4><strong>Ratatouille</strong></h4>
-                <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ 29,99</p>
+            <div class="escolher-pedido" onclick="selecionarPrato(this);">
+                <img src="images/lasanha.jpg" alt="">
+                <h4><strong>Lasanha p/2</strong></h4>
+                <h5>Muito queijo e molho especial</h5>
+                <p>R$ 24.99</p>
             </div>
-            <div class="escolher-pedido">
-                <img src="images/ratatouille.jpg" alt="">
-                <h4><strong>Ratatouille</strong></h4>
-                <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ 29,99</p>
+            <div class="escolher-pedido" onclick="selecionarPrato(this);">
+                <img src="images/lasanha.jpg" alt="">
+                <h4><strong>Lasanha p/4</strong></h4>
+                <h5>Muito queijo e molho especial</h5>
+                <p>R$ 39.99</p>
             </div>
-            <div class="escolher-pedido">
-                <img src="images/ratatouille.jpg" alt="">
-                <h4><strong>Ratatouille</strong></h4>
-                <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ 29,99</p>
+            <div class="escolher-pedido" onclick="selecionarPrato(this);">
+                <img src="images/lamen.jpg" alt="">
+                <h4><strong>Lámen</strong></h4>
+                <h5>O Japão na sua mesa</h5>
+                <p>R$ 19.99</p>
             </div>
         </div>
         
@@ -71,31 +72,31 @@
     <div class="escolher-bebida">
         <h2>Agora, sua bebida</h2>
         <div class="cardapio">
-            <div class="escolher-pedido">
+            <div class="escolher-pedido" onclick="selecionarBebida(this);">
+                <img src="images/dolly.jpg" alt="">
+                <h4><strong>Dolly 2L</strong></h4>
+                <h5>Dollynho, seu amiguinho</h5>
+                <p>R$ <span class="valor-bebida">4.99</span></p>
+            </div>
+            <div class="escolher-pedido" onclick="selecionarBebida(this);">
                 <img src="images/ratatouille.jpg" alt="">
                 <h4><strong>Ratatouille</strong></h4>
                 <h5>Veja as verduras com outro olhar</h5>
                 <p>R$ 29,99</p>
             </div>
-            <div class="escolher-pedido">
+            <div class="escolher-pedido" onclick="selecionarBebida(this);">
                 <img src="images/ratatouille.jpg" alt="">
                 <h4><strong>Ratatouille</strong></h4>
                 <h5>Veja as verduras com outro olhar</h5>
                 <p>R$ 29,99</p>
             </div>
-            <div class="escolher-pedido">
+            <div class="escolher-pedido" onclick="selecionarBebida(this);">
                 <img src="images/ratatouille.jpg" alt="">
                 <h4><strong>Ratatouille</strong></h4>
                 <h5>Veja as verduras com outro olhar</h5>
                 <p>R$ 29,99</p>
             </div>
-            <div class="escolher-pedido">
-                <img src="images/ratatouille.jpg" alt="">
-                <h4><strong>Ratatouille</strong></h4>
-                <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ 29,99</p>
-            </div>
-            <div class="escolher-pedido">
+            <div class="escolher-pedido" onclick="selecionarBebida(this);">
                 <img src="images/ratatouille.jpg" alt="">
                 <h4><strong>Ratatouille</strong></h4>
                 <h5>Veja as verduras com outro olhar</h5>
@@ -108,43 +109,45 @@
     <div class="escolher-sobremesa">
         <h2>Por fim, sua sobremesa</h2>
         <div class="cardapio">
-            <div class="escolher-pedido">
-                <img src="images/ratatouille.jpg" alt="">
-                <h4><strong>Ratatouille</strong></h4>
-                <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ 29,99</p>
+            <div class="escolher-pedido" onclick="selecionarSobremesa(this);">
+                <img src="images/pudim.jpg" alt="">
+                <h4><strong>Pudim</strong></h4>
+                <h5>Sabor original. Tamanho família</h5>
+                <p>R$ <span class="valor-sobremesa">20.99</span></p>
             </div>
-            <div class="escolher-pedido">
-                <img src="images/ratatouille.jpg" alt="">
-                <h4><strong>Ratatouille</strong></h4>
-                <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ 29,99</p>
+            <div class="escolher-pedido" onclick="selecionarSobremesa(this);">
+                <img src="images/bolo.jpeg" alt="">
+                <h4><strong>Bolo Chocolate</strong></h4>
+                <h5>Recheio: Café - 1 fatia</h5>
+                <p>R$ 9.99</p>
             </div>
-            <div class="escolher-pedido">
-                <img src="images/ratatouille.jpg" alt="">
-                <h4><strong>Ratatouille</strong></h4>
-                <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ 29,99</p>
+            <div class="escolher-pedido" onclick="selecionarSobremesa(this);">
+                <img src="images/cupcake.jfif" alt="">
+                <h4><strong>Cupcake</strong></h4>
+                <h5>Sabor: chocolate - 5 unidades.</h5>
+                <p>R$ 23.99</p>
             </div>
-            <div class="escolher-pedido">
-                <img src="images/ratatouille.jpg" alt="">
-                <h4><strong>Ratatouille</strong></h4>
-                <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ 29,99</p>
+            <div class="escolher-pedido" onclick="selecionarSobremesa(this);">
+                <img src="images/cookies.jpeg" alt="">
+                <h4><strong>Cookies</strong></h4>
+                <h5>5 unidades. Chocolatudo</h5>
+                <p>R$ 21,99</p>
             </div>
-            <div class="escolher-pedido">
-                <img src="images/ratatouille.jpg" alt="">
-                <h4><strong>Ratatouille</strong></h4>
-                <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ 29,99</p>
+            <div class="escolher-pedido" onclick="selecionarSobremesa(this);">
+                <img src="images/donuts.jpeg" alt="">
+                <h4><strong>Donuts</strong></h4>
+                <h5>Sabor: chocolate. 2 unidades</h5>
+                <p>R$ 9,99</p>
             </div>
         </div>
         
     </div>
 
     <footer>
-        <button class="fechar-pedido" disabled>Selecione os 3 itens para fechar o pedido</button>
+        <button class="fechar-pedido">Selecione os 3 itens para fechar o pedido</button>
     </footer>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="scripts.js" ></script>
 </body>
 

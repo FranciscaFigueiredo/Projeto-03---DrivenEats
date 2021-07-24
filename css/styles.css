@@ -37,6 +37,10 @@ h5 {
     color: #a6a6a6;
 }
 
+h4, h5, p {
+    padding: 0 10px 7px;
+}
+
 p {
     font-size: 16px;
     color: #000000;
@@ -45,6 +49,12 @@ p {
 img {
     width: 35vw;
     height: 25vw;
+
+    padding: 10px;
+
+    border-radius: 14px;
+
+    object-fit: cover;
 }
 
 header {
@@ -55,25 +65,28 @@ header {
 
     position: fixed;
     top: 0;
-    left: 0;    
+    left: 0; 
+    box-shadow: 1px 0 6px 1px rgba(0, 0, 0, 1.8);
 }
 
 .logo {
     width: 95vw;
     height: 92px;
 
+    color: #ffffff;
+
     margin: 0 auto;
     
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:flex-start;    
+    align-items:flex-start;  
 }
 
 .prato-principal {
     width: 95vw;
     
-    margin: calc(2vw + 92px) auto 2vw auto;
+    margin: calc(2vw + 100px) auto 2vw auto;
 }
 
 .escolher-bebida{
@@ -98,7 +111,7 @@ header {
     width: 40vw;
     height: 50vw;
 
-    padding: 10px;
+    /* padding: 10px; */
 
     background-color: #ffffff;  
     
@@ -111,6 +124,28 @@ header {
     justify-content: space-between;
     align-items: flex-start;
 }
+
+/* .opcao-marcada {
+    border: 0px 0px #32B72F;
+} */
+
+.prato-selecionado,
+.bebida-selecionada,
+.sobremesa-selecionada {
+    border: 7px solid #32B72F;
+}
+
+/* .icone {
+    position: absolute;
+    bottom: 0;
+    right: 2px;
+} */
+/* 
+ion-icon {
+    width: 15.44px;
+    height: 15.44px;
+    color: #32b72f;
+} */
 
 footer {
     width: 100vw;
