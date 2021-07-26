@@ -12,23 +12,20 @@ function selecionarPrato (prato) {
 
     if (selecionado !== null) {
         selecionado.classList.remove("prato-selecionado");
-        //para armazenar o valor e retirar do cálculo se for selecionado outro prato
-        precoPrato = Number(selecionado.querySelector(".valor-prato").innerHTML.replace(',', '.'))
+        ///para armazenar o valor e retirar do cálculo se for selecionada outra bebida
+        precoPrato = Number(selecionado.querySelector(".valor-prato").innerHTML.replace(',', '.'));
+        valorPedido = valorPedido - precoPrato;
     }
+
     prato.classList.toggle("prato-selecionado");
 
-    if(precoPrato === null) {
-        valorPedido += Number(prato.querySelector(".valor-prato").innerHTML.replace(',', '.'));
-        //para mudar o valor 0 anterior, para identificar na função fecharPedido que o campo já tem 1 item selecionado 
-        precoPrato = 0;
-    }
-    else {
-        valorPedido = valorPedido - precoPrato;
-        valorPedido += Number(prato.querySelector(".valor-prato").innerHTML.replace(',', '.'));
-    }
+    // pegando o nome do prato selecionado
+    precoPrato = Number(prato.querySelector(".valor-prato").innerHTML.replace(',', '.'));
+    
+    valorPedido += precoPrato;
+    
     // pegando o nome do prato selecionado
     pedido1 = document.querySelector(".prato-selecionado strong").innerHTML;
-    console.log(valorPedido);
 
     verificarSelecao();     // verifica se tem 1 elemento marcado em cada tipo de alimento
 }
@@ -39,22 +36,21 @@ function selecionarBebida (bebida) {
     if (selecionada !== null) {
         selecionada.classList.remove("bebida-selecionada");
         //para armazenar o valor e retirar do cálculo se for selecionada outra bebida
-        precoBebida = Number(selecionada.querySelector(".valor-bebida").innerHTML.replace(',', '.'))
+        precoBebida = Number(bebida.querySelector(".valor-bebida").innerHTML.replace(',', '.'));
+        //retirando o valor do campo selecionado anteriormente
+        valorPedido = valorPedido - precoBebida;
     }
+
     bebida.classList.toggle("bebida-selecionada");
 
-    if(precoBebida === null) {
-        valorPedido += Number(bebida.querySelector(".valor-bebida").innerHTML.replace(',', '.'));
-        //para mudar o valor 0 anterior, para identificar na função fecharPedido que o campo já tem 1 item selecionado 
-        precoBebida = 0;
-    }
-    else {
-        valorPedido = valorPedido - precoBebida;
-        valorPedido += Number(bebida.querySelector(".valor-bebida").innerHTML.replace(',', '.'));
-    }
+    // pegando o nome da bebida selecionada
+    precoBebida = Number(bebida.querySelector(".valor-bebida").innerHTML.replace(',', '.'));
+
+    valorPedido += precoBebida;
+    
     // pegando o nome da bebida selecionada
     pedido2 = document.querySelector(".bebida-selecionada strong").innerHTML;
-    console.log(valorPedido);
+    // valor2 = Number(prato.querySelector(".valor-bebida").innerHTML.replace(',', '.'));
 
     verificarSelecao();     // verifica se tem 1 elemento marcado em cada tipo de alimento
 }
@@ -64,24 +60,23 @@ function selecionarSobremesa (sobremesa) {
 
     if (selecionada !== null) {
         selecionada.classList.remove("sobremesa-selecionada");
-        //para armazenar o valor e retirar do cálculo se for selecionada outra sobremesa
-        precoSobremesa = Number(selecionada.querySelector(".valor-sobremesa").innerHTML.replace(',', '.'))
-    }
-    sobremesa.classList.toggle("sobremesa-selecionada");
-
-    if(precoSobremesa === null) {
-        valorPedido += Number(sobremesa.querySelector(".valor-sobremesa").innerHTML.replace(',', '.'));
-        //para mudar o valor 0 anterior, para identificar na função fecharPedido que o campo já tem 1 item selecionado
-        precoSobremesa = 0;
-    }
-    else {
+        //para armazenar o valor e retirar do cálculo se for selecionado outro prato
+        precoSobremesa = Number(sobremesa.querySelector(".valor-sobremesa").innerHTML.replace(',', '.'));
+        
         //retirando o valor do campo selecionado anteriormente
         valorPedido = valorPedido - precoSobremesa;
-        valorPedido += Number(sobremesa.querySelector(".valor-sobremesa").innerHTML.replace(',', '.'));
     }
+
+    sobremesa.classList.toggle("sobremesa-selecionada");
+
+    //para armazenar o valor e retirar do cálculo se for selecionado outro prato
+    precoSobremesa = Number(sobremesa.querySelector(".valor-sobremesa").innerHTML.replace(',', '.'));
+    
+    valorPedido += precoSobremesa;
+
     // pegando o nome da sobremesa
     pedido3 = document.querySelector(".sobremesa-selecionada strong").innerHTML;
-    console.log(valorPedido);
+    // valor1 = Number(prato.querySelector(".valor-prato").innerHTML.replace(',', '.'));
 
     verificarSelecao();     // verifica se tem 1 elemento marcado em cada tipo de alimento
 }
@@ -100,13 +95,22 @@ function ativarBotao() {
 }
 
 function confirmarPedido() {
-    //se todos os 3 campos têm 1 item selecionado
-    // valorPedido = valorPedido.toFixed(2);
+    valorPedido = valorPedido.toFixed(2);
 
     const confirmar = document.querySelector(".confirmar-pedido");
 
     confirmar.classList.toggle("hidden");
-    document.querySelector(".pedido").innerHTML=`<br><strong>- Prato:</strong>${pedido1} <br><strong>- Bebida: </strong>${pedido2} <br><strong>- Sobremesa: </strong>${pedido3} <br><br><strong>Valor: R$ </strong>${valorPedido}<br><br>`;
+
+    document.querySelector(".pedido-prato .prato").innerHTML=`${pedido1}`;
+    document.querySelector(".pedido-prato .valor").innerHTML= `R$ ${precoPrato}`;
+
+    document.querySelector(".pedido-bebida .bebida").innerHTML=`${pedido2}`;
+    document.querySelector(".pedido-bebida .valor").innerHTML= `R$ ${precoBebida}`;
+
+    document.querySelector(".pedido-sobremesa .sobremesa").innerHTML=`${pedido3}`
+    document.querySelector(".pedido-sobremesa .valor").innerHTML= `R$ ${precoSobremesa}`;
+
+    document.querySelector(".total .valor").innerHTML=`R$ ${valorPedido}`;
 }
 
 function fecharCarrinho() {
