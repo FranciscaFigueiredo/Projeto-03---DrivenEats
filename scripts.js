@@ -9,15 +9,22 @@ const botaoFecharPedido = document.querySelector(".fechar-pedido");
 
 function selecionarPrato (prato) {
     const selecionado = document.querySelector(".prato-selecionado");
+    // let iconeSelecionado = prato.querySelector(".icone");
 
     if (selecionado !== null) {
         selecionado.classList.remove("prato-selecionado");
         ///para armazenar o valor e retirar do cálculo se for selecionada outra bebida
         precoPrato = Number(selecionado.querySelector(".valor-prato").innerHTML.replace(',', '.'));
         valorPedido = valorPedido - precoPrato;
+        
+        selecionado.classList.toggle(".hidden");
     }
 
-    prato.classList.toggle("prato-selecionado");
+    if (prato !== selecionado) {
+        prato.classList.toggle("prato-selecionado");
+    
+        prato.classList.add(".hidden"); 
+    }
 
     // pegando o nome do prato selecionado
     precoPrato = Number(prato.querySelector(".valor-prato").innerHTML.replace(',', '.'));
@@ -39,10 +46,16 @@ function selecionarBebida (bebida) {
         precoBebida = Number(bebida.querySelector(".valor-bebida").innerHTML.replace(',', '.'));
         //retirando o valor do campo selecionado anteriormente
         valorPedido = valorPedido - precoBebida;
+
+        selecionada.classList.toggle(".hidden");
     }
 
-    bebida.classList.toggle("bebida-selecionada");
-
+    if (bebida !== selecionada) {
+        bebida.classList.toggle("bebida-selecionada");
+    
+        bebida.classList.add(".hidden"); 
+    }
+    
     // pegando o nome da bebida selecionada
     precoBebida = Number(bebida.querySelector(".valor-bebida").innerHTML.replace(',', '.'));
 
@@ -50,7 +63,6 @@ function selecionarBebida (bebida) {
     
     // pegando o nome da bebida selecionada
     pedido2 = document.querySelector(".bebida-selecionada strong").innerHTML;
-    // valor2 = Number(prato.querySelector(".valor-bebida").innerHTML.replace(',', '.'));
 
     verificarSelecao();     // verifica se tem 1 elemento marcado em cada tipo de alimento
 }
@@ -65,9 +77,15 @@ function selecionarSobremesa (sobremesa) {
         
         //retirando o valor do campo selecionado anteriormente
         valorPedido = valorPedido - precoSobremesa;
+
+        selecionada.classList.toggle(".hidden");
     }
 
-    sobremesa.classList.toggle("sobremesa-selecionada");
+    if (sobremesa !== selecionada) {
+        sobremesa.classList.toggle("sobremesa-selecionada");
+    
+        sobremesa.classList.add(".hidden"); 
+    }
 
     //para armazenar o valor e retirar do cálculo se for selecionado outro prato
     precoSobremesa = Number(sobremesa.querySelector(".valor-sobremesa").innerHTML.replace(',', '.'));
@@ -92,6 +110,7 @@ function ativarBotao() {
     document.querySelector(".botao-ativo").innerHTML="Fechar Pedido";
     //confirmarPedido();
     console.log(botaoFecharPedido)
+    document.querySelector(".botao-ativo").disabled=false;
 }
 
 function confirmarPedido() {

@@ -48,7 +48,7 @@ p {
 }
 
 img {
-    width: 160px;
+    width: 150px;
     height: 100px;
 
     padding: 10px;
@@ -67,7 +67,7 @@ header {
     position: fixed;
     top: 0;
     left: 0; 
-    box-shadow: 1px 0 6px 1px rgba(0, 0, 0, 1.8);
+    box-shadow: 1px 0 6px 0px rgba(0, 0, 0, 1.8);
 
     z-index: 10;
 }
@@ -114,11 +114,10 @@ header {
     width: 172px;
     height: 202px;
 
-    /* padding: 10px; */
-
     background-color: #ffffff;  
     
     border-radius: 10px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
 
     margin: 4vw 2vw;
 
@@ -126,27 +125,35 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+}
 
-    box-sizing: content-box;
+.preco {
+    width: 90%;
+    
+    display: flex;
+    justify-content: space-between;
 }
 
 .prato-selecionado,
 .bebida-selecionada,
 .sobremesa-selecionada {
     border: 7px solid #32B72F;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+
+    position: relative;
 }
 
-/* .icone {
+.icone {
     position: absolute;
     bottom: 0;
     right: 2px;
-} */
-/* 
+}
+
 ion-icon {
     width: 15.44px;
     height: 15.44px;
     color: #32b72f;
-} */
+}
 
 footer {
     width: 100vw;
@@ -182,7 +189,7 @@ footer button {
     width: 100vw;
     height: 100%;
     
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.9);
 
     display: flex;
     align-items: center;
@@ -225,7 +232,7 @@ footer button {
 .card-confirmacao .pedir {
     height: 52px;
 
-    background-color: #e5e5e5;
+    background-color: #ffffff;
 
     color: #50D074;
     font-size: 22px;
