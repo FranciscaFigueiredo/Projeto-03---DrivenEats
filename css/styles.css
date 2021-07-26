@@ -1,11 +1,12 @@
 * {
-    font-family: 'Roboto', sans-serif;
-
     box-sizing: border-box;
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
+
     background-color: #eeeeee;
+    position: relative;
 }
 
 strong {
@@ -47,8 +48,8 @@ p {
 }
 
 img {
-    width: 35vw;
-    height: 25vw;
+    width: 160px;
+    height: 100px;
 
     padding: 10px;
 
@@ -67,6 +68,8 @@ header {
     top: 0;
     left: 0; 
     box-shadow: 1px 0 6px 1px rgba(0, 0, 0, 1.8);
+
+    z-index: 10;
 }
 
 .logo {
@@ -108,8 +111,8 @@ header {
 }
 
 .escolher-pedido {
-    width: 40vw;
-    height: 50vw;
+    width: 172px;
+    height: 202px;
 
     /* padding: 10px; */
 
@@ -123,11 +126,9 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-}
 
-/* .opcao-marcada {
-    border: 0px 0px #32B72F;
-} */
+    box-sizing: content-box;
+}
 
 .prato-selecionado,
 .bebida-selecionada,
@@ -171,4 +172,75 @@ footer button {
     color: #ffffff;
     background-color: #cbcbcb;
     border: #cbcbcb;
+}
+
+.botao-ativo {
+    background-color: #32B72F;
+}
+
+.confirmar-pedido {
+    width: 100vw;
+    height: 100%;
+    
+    background-color: rgba(255, 255, 255, 0.7);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 100;
+}
+
+.card-confirmacao {
+    width: 90vw;
+    height: 85vw;
+    background-color: #50D074;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+    align-items: center;
+}
+
+.card-confirmacao p {
+
+    color: #ffffff;
+    font-size: 22px;
+
+}
+
+.card-confirmacao .pedir {
+    height: 52px;
+
+    background-color: #e5e5e5;
+
+    color: #50D074;
+    font-size: 22px;
+
+    border-radius: 100px;
+    border: none;
+
+    padding: 0 20px;
+}
+
+.card-confirmacao button {
+    height: 52px;
+
+    color: #ffffff;
+    font-size: 20px;
+
+    background-color: #50D074;
+    border: none;
+}
+
+.hidden {
+    display: none;
 }

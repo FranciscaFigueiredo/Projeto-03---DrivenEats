@@ -73,33 +73,33 @@
         <h2>Agora, sua bebida</h2>
         <div class="cardapio">
             <div class="escolher-pedido" onclick="selecionarBebida(this);">
+                <img src="images/tubaina.jpg" alt="">
+                <h4><strong>Itubaína</strong></h4>
+                <h5>A original. 355ml</h5>
+                <p>R$ <span class="valor-bebida">2.49</span></p>
+            </div>
+            <div class="escolher-pedido" onclick="selecionarBebida(this);">
                 <img src="images/dolly.jpg" alt="">
                 <h4><strong>Dolly 2L</strong></h4>
                 <h5>Dollynho, seu amiguinho</h5>
-                <p>R$ <span class="valor-bebida">4.99</span></p>
+                <p>R$ <span class="valor-bebida">4.49</span></p>
             </div>
             <div class="escolher-pedido" onclick="selecionarBebida(this);">
-                <img src="images/ratatouille.jpg" alt="">
-                <h4><strong>Ratatouille</strong></h4>
-                <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ <span class="valor-bebida">29.99</span></p>
+                <img src="images/frevo.jpg" alt="">
+                <h4><strong>Frevo</strong></h4>
+                <h5>Refrescantíssimo 2 Litros</h5>
+                <p>R$ <span class="valor-bebida">5.99</span></p>
             </div>
             <div class="escolher-pedido" onclick="selecionarBebida(this);">
-                <img src="images/ratatouille.jpg" alt="">
-                <h4><strong>Ratatouille</strong></h4>
-                <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ <span class="valor-bebida">4.99</span></p>
+                <img src="images/suco-laranja.jfif" alt="">
+                <h4><strong>Cítricos</strong></h4>
+                <h5>Laranja, limão e maracujá. 200ml</h5>
+                <p>R$ <span class="valor-bebida">3.99</span></p>
             </div>
             <div class="escolher-pedido" onclick="selecionarBebida(this);">
-                <img src="images/ratatouille.jpg" alt="">
-                <h4><strong>Ratatouille</strong></h4>
-                <h5>Veja as verduras com outro olhar</h5>
-                <p>R$ <span class="valor-bebida">4.99</span></p>
-            </div>
-            <div class="escolher-pedido" onclick="selecionarBebida(this);">
-                <img src="images/ratatouille.jpg" alt="">
-                <h4><strong>Ratatouille</strong></h4>
-                <h5>Veja as verduras com outro olhar</h5>
+                <img src="images/suco-verde.jfif" alt="">
+                <h4><strong>Suco Verde</strong></h4>
+                <h5>Couve, limão, abacaxi, maça. 200ml</h5>
                 <p>R$ <span class="valor-bebida">4.99</span></p>
             </div>
         </div>
@@ -144,8 +144,19 @@
     </div>
 
     <footer>
-        <button class="fechar-pedido" onclick="fecharPedido();">Selecione os 3 itens para fechar o pedido</button>
+        <button class="fechar-pedido" type="submit" onclick="confirmarPedido(this);">Selecione os 3 itens para fechar o pedido</button>
     </footer>
+
+    <div class="confirmar-pedido hidden">
+        <div class="card-confirmacao">
+            <br>
+            <p>Confirme seu pedido</p>
+            <p class="pedido"></p>
+           
+            <button class="pedir" onclick="enviarPedido();">Tudo certo, pode pedir!</button>
+            <button onclick="fecharCarrinho();">Cancelar</button>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="scripts.js" ></script>
